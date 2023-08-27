@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="cur"></div>
+    <div class="draw-container" id="default-draw">
+      <div class="draw-toolbar">
+        <input class="color-picker" type="color" />
+        <input class="size-slider" type="range" min="1", max="64" value="4" />
+        <input class="eraser-size-slider" type="range" min="1", max="64" value="20" />
+      </div>
+      <canvas class="draw" draggable="false" tabindex="0"></canvas>
+    </div>
+    <div id="app-container">
+      <div id="side-nav">
+        <h2>
+          Notes:
+        </h2>
+        <div id="note-list">
+          <div class="note-tab" id="note-tab">
+            
+          </div>
+        </div>
+      </div>
+      <div id="note-space">
+        <div id="note-name-container">
+          <h1 id="note-name" contenteditable spellcheck="false">
+            untitled
+          </h1>
+        </div>
+        <div id="note-text-container" tabindex="0">
+          <p id="test" style="overflow-wrap: break-word; white-space: pre;"><span id='text-head' style="user-select: none;">&#8192;</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="render.js" type="module"></script>
+  </body>
+</html>
